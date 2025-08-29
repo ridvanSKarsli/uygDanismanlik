@@ -4,7 +4,7 @@ import { Card } from 'antd';
 import {blogJson} from '../../constans'
 const { Meta } = Card;
 
-const Activities: React.FC = () => {
+export const Activities: React.FC = () => {
 
     return (
     <div className='activities-full-part'>
@@ -32,5 +32,3 @@ const Activities: React.FC = () => {
     </div>
   );
 };
-
-export { Activities };

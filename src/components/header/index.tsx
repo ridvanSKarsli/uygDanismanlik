@@ -155,15 +155,6 @@ export const Header: React.FC = ()=> {
                   <Menu.Item key="ihracat-kalkinma-ajansi:6">
                     <Link href='/ihracat-kalkinma-ajansi'>İhracat & Kalkınma Ajansı</Link>
                   </Menu.Item>
-                  <Menu.Item key="teknopark:7">
-                    <Link href='/teknopark'>Teknopark</Link>
-                  </Menu.Item>
-                  <Menu.Item key="projeTakip:8">
-                    <Link href='/projeTakipSistemi'>Proje Takip Sistemi</Link>
-                  </Menu.Item>
-                  <Menu.Item key="bultenler:9">
-                    <Link href='/bultenler'>Bültenler</Link>
-                  </Menu.Item>
               </SubMenu>
 
               <SubMenu key="organizsyon" icon={<AimOutlined />} title="Organizasyon">
@@ -284,11 +275,6 @@ export const Header: React.FC = ()=> {
                       Hakkımızda
                   </Link>
               </Menu.Item>
-              <Menu.Item key="kutuphane" icon={<AppstoreOutlined />}>
-                  <Link href='/kutuphane'>
-                      Kütüphane
-                  </Link>
-              </Menu.Item>
               <SubMenu key="hizmetler" icon={<PieChartOutlined />} title="Hizmetlerimiz">
                   <Menu.Item key="tubitak-teydeb:1">
                     <Link href='/tubitak-teydeb'>TÜBİTAK-TEYDEB Destek Programları</Link>
@@ -308,17 +294,12 @@ export const Header: React.FC = ()=> {
                   <Menu.Item key="ihracat-kalkinma-ajansi:6">
                     <Link href='/ihracat-kalkinma-ajansi'>İhracat & Kalkınma Ajansı</Link>
                   </Menu.Item>
-                  <Menu.Item key="teknopark:7">
-                    <Link href='/teknopark'>Teknopark</Link>
-                  </Menu.Item>
-                  <Menu.Item key="projeTakip:8">
-                    <Link href='/projeTakipSistemi'>Proje Takip Sistemi</Link>
-                  </Menu.Item>
-                  <Menu.Item key="bultenler:9">
-                    <Link href='/bultenler'>Bültenler</Link>
-                  </Menu.Item>
               </SubMenu>
-
+              <Menu.Item key="kutuphane" icon={<AppstoreOutlined />}>
+                  <Link href='/kutuphane'>
+                      Kütüphane
+                  </Link>
+              </Menu.Item>
               <Menu.Item key="contact">
                 <Link href='/iletisim'>
                   İletişim

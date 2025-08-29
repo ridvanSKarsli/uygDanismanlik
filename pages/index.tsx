@@ -1,5 +1,5 @@
 import React from "react";
-import {  Main, MainFeatures, OurReferences, VisitorStatement, Basarilarimiz, Hizmetler, SloganArea, Blog, Activities } from "@components";
+import {  Main, OurReferences, Basarilarimiz, Hizmetler, SloganArea} from "@components";
 import Head from 'next/head'
 
 const Home: React.FC = () => {
@@ -23,11 +23,8 @@ const Home: React.FC = () => {
       <Main />
       <Hizmetler />
       <Basarilarimiz />
-      <OurReferences />
-      <VisitorStatement />
-      <MainFeatures />
-      <SloganArea />
-      <Activities />
+      <OurReferences />            
+      <SloganArea />      
     </div>
     </>
   );
