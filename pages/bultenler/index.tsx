@@ -1,7 +1,7 @@
 import React from "react";
 import Head from 'next/head';
 import Script from 'next/experimental-script';
-import Activities from '../../src/components/activities';
+import { Activities } from '../../src/components/activities';
 
 const BultenlerPage: React.FC = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import {  Main, OurReferences, Basarilarimiz, Hizmetler, SloganArea} from "@components";
+import {  Main, OurReferences, Basarilarimiz, Hizmetler, SloganArea, ThreeBoxes} from "@components";
 import Head from 'next/head'
 
 const Home: React.FC = () => {
@@ -21,6 +21,7 @@ const Home: React.FC = () => {
       style={{ display: "flex",overflow:'hidden', flexDirection: "column", minHeight: "100vh" }}
     >
       <Main />
+      <ThreeBoxes />
       <Hizmetler />
       <Basarilarimiz />
       <OurReferences />            

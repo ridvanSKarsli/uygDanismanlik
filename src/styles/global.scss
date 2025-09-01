@@ -716,6 +716,30 @@ body {
     }
   }
   
+  .list-box {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 3px solid rgb(38, 211, 103);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    .list-box-icon {
+      color: rgb(38, 211, 103);
+      font-size: 20px;
+      margin-right: 15px;
+    }
+
+    .list-box-text {
+      margin: 0;
+      color: rgb(44, 44, 44);
+      font-size: 1em;
+      line-height: 1.4;
+    }
+  }
+
   .process-steps {
     .process-step {
       background: linear-gradient(135deg, #f8f9fa, #e8f5e8);
@@ -1069,9 +1093,6 @@ body {
   display: flex;
   align-items: center;
   padding-right: 24px;
-  .ant-card-cover {
-    
-  }
 }
  
 }
@@ -1166,9 +1187,6 @@ body {
   display: flex;
   align-items: center;
   padding-right: 24px;
-  .ant-card-cover {
-    
-  }
 }
 }
 
@@ -1533,4 +1551,76 @@ body {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid gainsboro;
+}
+
+.three-boxes-section {
+  padding: 40px 0;
+  background-color: #f8f8f8;
+
+  .three-boxes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    .three-box-card {
+      text-align: center;
+
+      .three-box-card-inner {
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        padding: 20px;
+
+        .icon-container {
+          font-size: 3em;
+          color: #1890ff; // Ant Design primary color
+          margin-bottom: 10px;
+        }
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+          font-size: 1.2em;
+          font-weight: 600;
+          color: #333;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.custom-breadcrumb {
+  padding: 15px 20px;
+  background-color: #f0f2f5;
+  border-bottom: 1px solid #e8e8e8;
+
+  .ant-breadcrumb {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .ant-breadcrumb-link {
+      a {
+        color: #555;
+
+        &:hover {
+          color: #1890ff;
+        }
+      }
+    }
+
+    .ant-breadcrumb-separator {
+      color: #999;
+    }
+
+    .ant-breadcrumb-overlay {
+      // Sadece dropdown menüsü varsa bu stil uygulanır, şu an için gerek yok.
+    }
+  }
 }

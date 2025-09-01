@@ -5,24 +5,39 @@ import { Card as AntdCard, Menu } from "antd"
 const hizmetler = [
   {
     id: 1,
-    title: "Teknopark'a Giriş Yapmak İçin Bilmeniz Gerekenler",
-    slug: "teknopark-giris-bilmeniz-gerekenler",
-    content:
-      "Teknopark'lara giriş yapmak için gerekli kriterler, başvuru süreçleri ve dikkat edilmesi gereken önemli noktalar hakkında detaylı bilgi. Teknopark avantajları ve şirketiniz için sağlayacağı faydalar...",
+    title: "TÜBİTAK-TEYDEB Destek Programları Başvuru Ve Yürütme",
+    slug: "tubitak-teydeb-destek-programlari",
+    content: "TÜBİTAK-TEYDEB destek programları hakkında detaylı bilgi, başvuru süreçleri ve projelerinizin yürütülmesi için profesyonel destek hizmetleri.",
   },
   {
     id: 2,
-    title: "İşletmeniz İçin Proje Çağrılarını Takip Edebileceğiniz Sistem",
-    slug: "proje-cagrilari-takip-sistemi",
-    content:
-      "İşletmenizin gelişimi için kritik öneme sahip proje çağrılarını takip edebileceğiniz gelişmiş sistem. Devlet destekleri, teşvikler ve fırsatları kaçırmamak için profesyonel takip hizmeti...",
+    title: "KOSGEB Destek Programları Başvuru ve Yürütme",
+    slug: "kosgeb-destek-programlari",
+    content: "KOSGEB destek programlarına başvuru süreçleri, desteklerden faydalanma koşulları ve projelerinizin başarılı bir şekilde yürütülmesi için danışmanlık hizmetleri.",
   },
   {
     id: 3,
-    title: "Bültenler",
-    slug: "bultenler",
-    content:
-      "Sektördeki son gelişmeler, yeni teşvikler, proje çağrıları ve önemli duyurular hakkında güncel bilgiler içeren düzenli bültenler. Abone olarak tüm fırsatları kaçırmayın...",
+    title: "Teknoloji Geliştirme Bölgesi (Teknopark/Teknokent) Başvuru ve Sürdürülebilirliği",
+    slug: "teknoloji-gelistirme-bolgesi",
+    content: "Teknopark ve Teknokentlere başvuru süreçleri, kabul kriterleri ve projelerinizin sürdürülebilirliği için kapsamlı danışmanlık hizmetleri.",
+  },
+  {
+    id: 4,
+    title: "Avrupa Birliği Projeleri Programları",
+    slug: "avrupa-birligi-projeleri",
+    content: "Avrupa Birliği projeleri programları hakkında detaylı bilgi, başvuru süreçleri ve uluslararası fonlardan faydalanma imkanları.",
+  },
+  {
+    id: 5,
+    title: "Yatırım Teşvik Belgesi Başvuru ve Sürdürülebilirliği",
+    slug: "yatirim-tesvik-belgesi",
+    content: "Yatırım Teşvik Belgesi başvuru süreçleri, teşviklerden faydalanma koşulları ve yatırımlarınızın sürdürülebilirliği için danışmanlık hizmetleri.",
+  },
+  {
+    id: 6,
+    title: "İhracat & Kalkınma Ajansı Destekleri Başvuru Hazırlama",
+    slug: "ihracat-kalkinma-ajansi-destekleri",
+    content: "İhracat ve Kalkınma Ajansı desteklerine başvuru hazırlama süreçleri, desteklerden faydalanma koşulları ve ihracat potansiyelinizi artırma fırsatları.",
   },
 ]
 
@@ -44,7 +59,7 @@ const Hizmetler: React.FC = () => {
                   {item.content.length > 160 ? `${item.content.slice(0, 160)}...` : item.content}
                 </p>
                 <div className="card-action">
-                  <Link href={item.id === 1 ? "/teknopark" : item.id === 2 ? "/projeTakipSistemi" : item.id === 3 ? "/bultenler" : `/blog/${item.slug || item.title.toLowerCase().replace(/ /g, "-")}`}>
+                  <Link href="/hizmetlerimiz">
                     <div className="header-style-button">
                       Devamı Oku
                     </div>
@@ -60,5 +75,8 @@ const Hizmetler: React.FC = () => {
 }
 
 export { Hizmetler }
+
+
+
 
 

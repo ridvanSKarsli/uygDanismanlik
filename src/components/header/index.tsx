@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Menu,Row,Col,Alert, Button, Drawer } from 'antd';
 import { MailOutlined, AppstoreOutlined,WhatsAppOutlined,UnorderedListOutlined,
-   AimOutlined ,PieChartOutlined, RadarChartOutlined} from '@ant-design/icons';
+   AimOutlined ,PieChartOutlined, RadarChartOutlined, PhoneOutlined} from '@ant-design/icons';
 import { Logo } from "@components";
 import Marquee from 'react-fast-marquee';
 import Link from "next/link";
@@ -51,18 +51,8 @@ export const Header: React.FC = ()=> {
       setCurrent('hakkimizda');
     } else if (pathname === '/kutuphane') {
       setCurrent('kutuphane');
-    } else if (pathname === '/tubitak-teydeb') {
-      setCurrent('tubitak-teydeb:1');
-    } else if (pathname === '/kosgeb-destekleri') {
-      setCurrent('kosgeb-destekleri:2');
-    } else if (pathname === '/teknoloji-gelistirme-bolgesi') {
-      setCurrent('teknoloji-gelistirme-bolgesi:3');
-    } else if (pathname === '/avrupa-birligi-projeleri') {
-      setCurrent('avrupa-birligi-projeleri:4');
-    } else if (pathname === '/yatirim-tesvik-belgesi') {
-      setCurrent('yatirim-tesvik-belgesi:5');
-    } else if (pathname === '/ihracat-kalkinma-ajansi') {
-      setCurrent('ihracat-kalkinma-ajansi:6');
+    } else if (pathname.startsWith('/hizmetlerimiz')) {
+      setCurrent('hizmetlerimiz');
     } else if (pathname === '/teknopark') {
       setCurrent('teknopark:1');
     } else if (pathname === '/projeTakipSistemi') {
@@ -88,23 +78,34 @@ export const Header: React.FC = ()=> {
     return(
       <>
         <div className='contact-area'>
-          <Col span={4} className='email-contact'>
+          <Col span={8} xs={8} className='email-contact'>
             <MailOutlined />
               <div>
-                <span>Email</span>
-                <span>  
-                  <a href='mailto:onder.sahin.com' >
+                <span style={{ fontSize: '12px' }}>Email</span>
+                <span style={{ fontSize: '14px' }}>  
+                  <a href='mailto:info@uygdanismanlik.com' >
                       info@uygdanismanlik.com
                     </a>
                   </span>
               </div>
           </Col>
-          <Col span={4} className='phone-contact'>
-            <WhatsAppOutlined />
+          <Col span={8} xs={8} className='phone-contact'>
+            <PhoneOutlined />
                 <div>
-                  <span>Telefon</span>
-                  <span>
+                  <span style={{ fontSize: '12px' }}>Telefon</span>
+                  <span style={{ fontSize: '14px' }}>
                     <a href='tel:+905528048454' >
+                      +90 552 804 84 54
+                    </a>
+                  </span>
+                </div>
+            </Col>
+            <Col span={8} xs={8} className='whatsapp-contact'>
+              <WhatsAppOutlined />
+                <div>
+                  <span style={{ fontSize: '12px' }}>WhatsApp</span>
+                  <span style={{ fontSize: '14px' }}>
+                    <a href='https://wa.me/905528048454' target="_blank" rel="noopener noreferrer">
                       +90 552 804 84 54
                     </a>
                   </span>
@@ -120,42 +121,18 @@ export const Header: React.FC = ()=> {
         
         <Drawer title="Menü" className="mobile-menu"  placement="left" onClose={onClose} visible={visible}>
         <Menu  onClick={handleClick} selectedKeys={[current]} mode="inline">
-              <Menu.Item key="mail" icon={<MailOutlined />}>
-                  <Link href='/'>
-                     Anasayfa
-                    </Link>
-                
+              <Menu.Item key="anasayfa">
+                  <Link href="/">Ana Sayfa</Link>
               </Menu.Item>
               <Menu.Item key="hakkimizda" icon={<AppstoreOutlined />}>
-                  <Link href='/hakkimizda'>
-                      Hakkımızda
-                  </Link>
+                  <Link href="/hakkimizda">Hakkımızda</Link>
               </Menu.Item>
               <Menu.Item key="kutuphane" icon={<AppstoreOutlined />}>
-                  <Link href='/kutuphane'>
-                      Kütüphane
-                  </Link>
+                  <Link href="/kutuphane">Kütüphane</Link>
               </Menu.Item>
-              <SubMenu key="hizmetler" icon={<PieChartOutlined />} title="Hizmetlerimiz">
-                  <Menu.Item key="tubitak-teydeb:1">
-                    <Link href='/tubitak-teydeb'>TÜBİTAK-TEYDEB Destek Programları</Link>
-                  </Menu.Item>
-                  <Menu.Item key="kosgeb-destekleri:2"> 
-                    <Link href='/kosgeb-destekleri'>KOSGEB Destek Programları</Link>
-                  </Menu.Item>
-                  <Menu.Item key="teknoloji-gelistirme-bolgesi:3">
-                    <Link href='/teknoloji-gelistirme-bolgesi'>Teknoloji Geliştirme Bölgesi</Link>
-                  </Menu.Item>
-                  <Menu.Item key="avrupa-birligi-projeleri:4">
-                    <Link href='/avrupa-birligi-projeleri'>Avrupa Birliği Projeleri</Link>
-                  </Menu.Item>
-                  <Menu.Item key="yatirim-tesvik-belgesi:5">
-                    <Link href='/yatirim-tesvik-belgesi'>Yatırım Teşvik Belgesi</Link>
-                  </Menu.Item>
-                  <Menu.Item key="ihracat-kalkinma-ajansi:6">
-                    <Link href='/ihracat-kalkinma-ajansi'>İhracat & Kalkınma Ajansı</Link>
-                  </Menu.Item>
-              </SubMenu>
+              <Menu.Item key="hizmetlerimiz" icon={<PieChartOutlined />}>
+                <Link href="/hizmetlerimiz">Hizmetlerimiz</Link>
+              </Menu.Item>
 
               <SubMenu key="organizsyon" icon={<AimOutlined />} title="Organizasyon">
                   <Menu.Item key="organizsyon:1">
@@ -165,16 +142,14 @@ export const Header: React.FC = ()=> {
                   <Link href='/yurtici-egitim-turlari'>Yurt İçi Eğitim Turları </Link>  </Menu.Item>
               </SubMenu>
               <Menu.Item key="contact">
-                <Link href='/iletisim'>
-                  İletişim
-                </Link>
+                <Link href="/iletisim">İletişim</Link>
               </Menu.Item>
             </Menu>
-        </Drawer>
-      </>
-    )
-  }
-  else {
+          </Drawer>
+        </>
+      )
+    }
+    else {
     return (
       <>
       {/* <h1>Index page</h1>
@@ -201,18 +176,29 @@ export const Header: React.FC = ()=> {
               <div>
                 <span>Email</span>
                 <span>  
-                  <a href='mailto:onder.sahin.com' >
+                  <a href='mailto:info@uygdanismanlik.com' >
                       info@uygdanismanlik.com
                     </a>
                   </span>
               </div>
           </Col>
-            <Col span={4} className='phone-contact'>
-            <WhatsAppOutlined />
+          <Col span={4} className='phone-contact'>
+            <PhoneOutlined />
                 <div>
                   <span>Telefon</span>
                   <span>
                     <a href='tel:+905528048454' >
+                      +90 552 804 84 54
+                    </a>
+                  </span>
+                </div>
+            </Col>
+            <Col span={4} className='whatsapp-contact'>
+              <WhatsAppOutlined />
+                <div>
+                  <span>WhatsApp</span>
+                  <span>
+                    <a href='https://wa.me/905528048454' target="_blank" rel="noopener noreferrer">
                       +90 552 804 84 54
                     </a>
                   </span>
@@ -275,26 +261,11 @@ export const Header: React.FC = ()=> {
                       Hakkımızda
                   </Link>
               </Menu.Item>
-              <SubMenu key="hizmetler" icon={<PieChartOutlined />} title="Hizmetlerimiz">
-                  <Menu.Item key="tubitak-teydeb:1">
-                    <Link href='/tubitak-teydeb'>TÜBİTAK-TEYDEB Destek Programları</Link>
-                  </Menu.Item>
-                  <Menu.Item key="kosgeb-destekleri:2"> 
-                    <Link href='/kosgeb-destekleri'>KOSGEB Destek Programları</Link>
-                  </Menu.Item>
-                  <Menu.Item key="teknoloji-gelistirme-bolgesi:3">
-                    <Link href='/teknoloji-gelistirme-bolgesi'>Teknoloji Geliştirme Bölgesi</Link>
-                  </Menu.Item>
-                  <Menu.Item key="avrupa-birligi-projeleri:4">
-                    <Link href='/avrupa-birligi-projeleri'>Avrupa Birliği Projeleri</Link>
-                  </Menu.Item>
-                  <Menu.Item key="yatirim-tesvik-belgesi:5">
-                    <Link href='/yatirim-tesvik-belgesi'>Yatırım Teşvik Belgesi</Link>
-                  </Menu.Item>
-                  <Menu.Item key="ihracat-kalkinma-ajansi:6">
-                    <Link href='/ihracat-kalkinma-ajansi'>İhracat & Kalkınma Ajansı</Link>
-                  </Menu.Item>
-              </SubMenu>
+              <Menu.Item key="hizmetlerimiz" icon={<PieChartOutlined />}>
+                <Link href='/hizmetlerimiz'>
+                    Hizmetlerimiz
+                </Link>
+              </Menu.Item>
               <Menu.Item key="kutuphane" icon={<AppstoreOutlined />}>
                   <Link href='/kutuphane'>
                       Kütüphane

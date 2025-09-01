@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Script from 'next/experimental-script';
+import { Button } from 'antd'; // Added Button import
 
 const ProjeTakipSistemiPage: React.FC = () => {
   return (
@@ -32,7 +33,22 @@ const ProjeTakipSistemiPage: React.FC = () => {
       
       <div className='hakkimizda-aciklama'>
         <h1>İşletmeniz İçin Proje Çağrılarını Takip Edebileceğiniz Sistem</h1>
-          
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <p style={{ marginBottom: '20px', fontSize: '1.1em' }}>
+              Proje Sihirbazı platformuna erişmek için aşağıdaki butona tıklayabilirsiniz.
+            </p>
+            <Button 
+              type="primary" 
+              size="large" 
+              href="https://projesihirbazi.enmdigital.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="proje-sihirbazi-button"
+            >
+              Proje Sihirbazı Portalına Git
+            </Button>
+          </div>
+
           <div className="content-section">
             <p style={{ fontSize: '1.2em', textAlign: 'center', marginBottom: '30px' }}>
               Her gün taranan ihale ve hibe çağrıları ile fırsatları kaçırmadan, başvuru sürecini hızlandırın.
@@ -70,37 +86,6 @@ const ProjeTakipSistemiPage: React.FC = () => {
           </div>
 
           <div className="content-section">
-            <h2>Ödeme Planları</h2>
-            <div className="pricing-grid">
-              <div className="pricing-item">
-                <h3>Sektör Bazlı</h3>
-                <div className="price">2000$ + KDV/ yıllık</div>
-                <ul>
-                  <li>Tam sektör analizi</li>
-                  <li>Yapay zeka asistanı ile tam etkileşim</li>
-                  <li>Gelişmiş raporlama araçları</li>
-                  <li>Haftalık güncellemeler</li>
-                  <li>2 sektör takibi</li>
-                  <li>Telefon ve e-posta desteği</li>
-                </ul>
-              </div>
-              <div className="pricing-item featured">
-                <h3>Tüm Sektörler</h3>
-                <div className="price">20000$ + KDV / yıllık</div>
-                <ul>
-                  <li>Tüm sektörlerde tam analiz</li>
-                  <li>Yapay zeka asistanı ile tam etkileşim</li>
-                  <li>Gelişmiş raporlama araçları</li>
-                  <li>Günlük güncellemeler</li>
-                  <li>Sınırsız sektör takibi</li>
-                  <li>Öncelikli telefon ve e-posta desteği</li>
-                  <li>Özel danışmanlık hizmeti</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="content-section">
             <h2>Sık Sorulan Sorular</h2>
             <div className="faq-section">
               <div className="faq-item">
@@ -124,21 +109,6 @@ const ProjeTakipSistemiPage: React.FC = () => {
                 <p>Sektör bazlı paket 2000$ + KDV/yıllık, tüm sektörler paketi 20000$ + KDV/yıllıktır.</p>
               </div>
             </div>
-          </div>
-
-          <div className="content-section" style={{ textAlign: 'center', marginTop: '40px' }}>
-            <h2>Portal'a Erişim</h2>
-            <p style={{ marginBottom: '20px' }}>
-              Proje Sihirbazı platformuna erişmek için aşağıdaki linke tıklayabilirsiniz.
-            </p>
-            <a 
-              href="https://projesihirbazi.enmdigital.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="portal-link"
-            >
-              Proje Sihirbazı Portalına Git
-            </a>
           </div>
         </div>
       </>

@@ -34,7 +34,7 @@
 .email-contact {
     border-radius: 10px 10px 0px 0px;
 }
-.email-contact , .phone-contact{
+.email-contact , .phone-contact , .whatsapp-contact{
     display: flex;
     align-items: center;
     background: rgb(44, 44, 44);
@@ -88,6 +88,16 @@
 .phone-contact{
     background: rgb(38, 211, 103);
     border-radius: 0px 0px 10px 10px;
+    svg {
+        path {
+            fill: white
+        }
+        
+    }
+}
+.whatsapp-contact{
+    background: #25D366; /* WhatsApp yeşili */
+    border-radius: 0px 0px 10px 10px; /* Diğerleriyle uyumlu köşeler */
     svg {
         path {
             fill: white
