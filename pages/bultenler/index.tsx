@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Script from 'next/experimental-script';
 import { Activities } from '../../src/components/activities';
 
+import Image from 'next/image';
+
 const BultenlerPage: React.FC = () => {
   return (
     <>
@@ -31,19 +33,45 @@ const BultenlerPage: React.FC = () => {
       `}
       </Script>
       
-      <div className='hakkimizda-aciklama'>
-        <h1>Bültenler</h1>
+      <div className='hakkmizda-banner'>
+        <Image src='/images/etkinlik.webp' alt='Bültenler' className='image' layout='fill' />
+        <div className='hakkimzda-description'>
+            <h2>Bültenler ve Etkinlikler</h2>
+            <p>Sektördeki son gelişmeler ve önemli duyurular hakkında güncel bilgiler.</p>
+        </div>
+      </div>
+      
+      <div className='teknopark-page'>
+        <div className="page-container">
+          <h1 className="page-title">Bültenler</h1>
           
-          <div className="content-section">
-            <p style={{ fontSize: '1.2em', textAlign: 'center', marginBottom: '30px' }}>
-              Sektördeki son gelişmeler, yeni teşvikler, proje çağrıları ve önemli duyurular hakkında güncel bilgiler içeren düzenli bültenler.
-            </p>
+          <div className="service-intro">
+            <div className="intro-content">
+              <h2>Güncel Haberler ve Duyurular</h2>
+              <p>
+                Sektördeki son gelişmeler, yeni teşvikler, proje çağrıları ve önemli duyurular hakkında 
+                güncel bilgiler içeren düzenli bültenlerimizle her zaman bilgi sahibi olun.
+              </p>
+            </div>
           </div>
 
-          <div className="content-section">
+          <div className="service-section">
+            <h2>Etkinlikler ve Haberler</h2>
             <Activities />
           </div>
+          
+          <div className="subscribe-section">
+            <h2>Bülten Aboneliği</h2>
+            <p>
+              Düzenli bültenlerimize abone olarak sektördeki son gelişmeleri kaçırmayın. 
+              Size özel hazırladığımız içeriklerle her zaman güncel kalın.
+            </p>
+            <a href="/iletisim" className="subscribe-button">
+              Bültene Abone Ol
+            </a>
+          </div>
         </div>
+      </div>
       </>
     );
   };

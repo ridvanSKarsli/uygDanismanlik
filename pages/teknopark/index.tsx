@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Script from 'next/experimental-script';
+import Image from 'next/image';
+
 
 const TeknoparkPage: React.FC = () => {
   return (
@@ -13,7 +15,7 @@ const TeknoparkPage: React.FC = () => {
         <meta name="Description" content="Teknoparklara giriş süreçleri, başvuru koşulları, avantajları ve dikkat edilmesi gerekenler hakkında detaylı bilgiler." />
         <meta name="og:description" content="Teknoparklara giriş süreçleri, başvuru koşulları, avantajları ve dikkat edilmesi gerekenler hakkında detaylı bilgiler." />
         <meta property="og:url" content="/teknopark" />
-        <meta property="og:image" content="teknopark.jpeg" />
+        <meta property="og:image" content="teknopark.JPG" />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <Script
@@ -30,8 +32,17 @@ const TeknoparkPage: React.FC = () => {
       `}
       </Script>
       
-      <div className='hakkimizda-aciklama'>
-        <h1>Teknopark'a Giriş Yapmak İçin Bilmeniz Gerekenler</h1>
+      <div className='hakkmizda-banner'>
+        <Image src='/images/endustri.jpeg' alt='Teknopark' className='image' layout='fill' />
+        <div className='hakkimzda-description'>
+            <h2>Yenilikçi Projeleriniz İçin Teknopark Destekleri</h2>
+            <p>Ar-Ge ve inovasyon faaliyetlerinizi teknopark avantajlarıyla geliştirin.</p>
+        </div>
+      </div>
+
+      <div className='teknopark-page'>
+        <div className="page-container">
+          <h1 className="page-title">Teknopark'a Giriş Yapmak İçin Bilmeniz Gerekenler</h1>
           
           <div className="content-section">
             <h2>Teknopark Nedir?</h2>
@@ -99,6 +110,18 @@ const TeknoparkPage: React.FC = () => {
               bulunmaktadır.
             </p>
           </div>
+          
+          <div className="contact-section">
+            <h2>Teknopark Başvurunuz İçin Destek Alın</h2>
+            <p>
+              Uzman ekibimizle teknopark başvuru sürecinizi başarıyla tamamlayın. 
+              Size özel danışmanlık hizmetimizden yararlanmak için bizimle iletişime geçin.
+            </p>
+            <a href="/iletisim" className="contact-button">
+              İletişime Geçin
+            </a>
+          </div>
+        </div>
         </div>
       </>
     );

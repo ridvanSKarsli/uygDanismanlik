@@ -1,7 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 import Script from 'next/experimental-script';
-import { Button } from 'antd'; // Added Button import
+import { Button } from 'antd';
+import Image from 'next/image';
+import Link from 'next/link';
+
 
 const ProjeTakipSistemiPage: React.FC = () => {
   return (
@@ -14,7 +17,7 @@ const ProjeTakipSistemiPage: React.FC = () => {
         <meta name="Description" content="İşletmenizin gelişimi için kritik öneme sahip proje çağrılarını takip edebileceğiniz gelişmiş sistem." />
         <meta name="og:description" content="İşletmenizin gelişimi için kritik öneme sahip proje çağrılarını takip edebileceğiniz gelişmiş sistem." />
         <meta property="og:url" content="/projeTakipSistemi" />
-        <meta property="og:image" content="proje-takip.jpeg" />
+        <meta property="og:image" content="image3.webp" />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <Script
@@ -31,85 +34,105 @@ const ProjeTakipSistemiPage: React.FC = () => {
       `}
       </Script>
       
-      <div className='hakkimizda-aciklama'>
-        <h1>İşletmeniz İçin Proje Çağrılarını Takip Edebileceğiniz Sistem</h1>
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-            <p style={{ marginBottom: '20px', fontSize: '1.1em' }}>
-              Proje Sihirbazı platformuna erişmek için aşağıdaki butona tıklayabilirsiniz.
-            </p>
-            <Button 
-              type="primary" 
-              size="large" 
-              href="https://projesihirbazi.enmdigital.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="proje-sihirbazi-button"
-            >
-              Proje Sihirbazı Portalına Git
-            </Button>
+      <div className='hakkmizda-banner'>
+        <Image src='/images/project.webp' alt='Proje Takip Sistemi' className='image' layout='fill' />
+        <div className='hakkimzda-description'>
+            <h2>İşletmeniz İçin Proje Takip Sistemi</h2>
+            <p>Çağrıları kaçırmayın, projelerinizi kolayca yönetin.</p>
+        </div>
+      </div>
+
+      <div className='teknopark-page'>
+        <div className="page-container">
+          <h1 className="page-title">İş Fırsatlarını Yakalayın: Kapsamlı Proje Takip Sistemi</h1>
+          
+          <div className="service-intro">
+            <div className="intro-content">
+              <h2>Proje Sihirbazı ile Fırsatları Keşfedin</h2>
+              <p>
+                İşletmenizin büyümesini hızlandıracak güncel proje ve hibe çağrılarına tek platformdan erişin.
+                Yapay zeka destekli sistemimizle hiçbir fırsatı kaçırmayın.
+              </p>
+              <div style={{ textAlign: 'center', marginTop: '30px' }}>
+                <a
+                  href="https://projesihirbazi.enmdigital.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="portal-link"
+                >
+                  Proje Sihirbazı Portalına Git
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div className="content-section">
-            <p style={{ fontSize: '1.2em', textAlign: 'center', marginBottom: '30px' }}>
-              Her gün taranan ihale ve hibe çağrıları ile fırsatları kaçırmadan, başvuru sürecini hızlandırın.
-            </p>
-          </div>
-
-          <div className="content-section">
+          <div className="service-section">
             <h2>Sunduğumuz Hizmetler</h2>
             <div className="advantages-grid">
               <div className="advantage-item">
-                <h3>Her Gün Güncellenen İhale Takibi</h3>
-                <p>Sektörünüz için uygun ihale ve hibe çağrılarını her gün otomatik olarak tarar ve size özel bildirimler gönderir.</p>
+                <h3>Kapsamlı Hibe ve İhale Takibi</h3>
+                <p>Sektörünüze özel, her gün güncellenen ihale, hibe ve destek programlarını anında takip edin, hiçbir fırsatı kaçırmayın.</p>
               </div>
               <div className="advantage-item">
-                <h3>Akıllı Rehberlik</h3>
-                <p>Başvuru koşullarını hızlıca öğrenmenizi ve başvuru sırasında adım adım yönlendirilmenizi sağlar.</p>
+                <h3>Yapay Zeka Destekli Rehberlik</h3>
+                <p>Başvuru koşullarını kolayca anlayın ve başvuru sürecinde yapay zeka destekli akıllı rehberliğimizle adım adım ilerleyin.</p>
               </div>
               <div className="advantage-item">
-                <h3>Kapsamlı Sektörel Analiz</h3>
-                <p>Sektörünüzü derinlemesine analiz ederek en uygun fırsatları değerlendirmenizi sağlar.</p>
+                <h3>Detaylı Sektörel Analiz</h3>
+                <p>Sektörünüzün dinamiklerini derinlemesine analiz ederek en uygun hibe ve ihale fırsatlarını stratejik olarak belirleyin.</p>
               </div>
               <div className="advantage-item">
-                <h3>Tek Tıkla Başvuru</h3>
-                <p>Uygun ihale ve hibelere tek tıkla başvurmanızı kolaylaştırır.</p>
+                <h3>Kolay ve Hızlı Başvuru Süreci</h3>
+                <p>Uygun hibe ve ihale programlarına hızlı ve sorunsuz bir şekilde başvurun, bürokratik engelleri ortadan kaldırın.</p>
               </div>
               <div className="advantage-item">
-                <h3>Dinamik Raporlama Araçları</h3>
-                <p>Faaliyetlerinizle ilgili kapsamlı raporlar oluşturarak stratejik kararlar almanıza yardımcı olur.</p>
+                <h3>Gelişmiş Raporlama ve Analiz</h3>
+                <p>Projelerinizin durumunu, başvuru süreçlerinizi ve performansınızı detaylı raporlama araçlarımızla anlık olarak takip edin.</p>
               </div>
               <div className="advantage-item">
-                <h3>Anlık Bildirimler</h3>
-                <p>Değişiklikler ve yeni fırsatlar hakkında anında bilgilendirme sağlayarak hızlı aksiyon almanıza olanak tanır.</p>
+                <h3>Özelleştirilmiş Anlık Bildirimler</h3>
+                <p>Yeni çağrılar, son başvuru tarihleri ve önemli güncellemeler hakkında size özel anlık bildirimlerle her zaman bilgi sahibi olun.</p>
               </div>
             </div>
           </div>
 
-          <div className="content-section">
+          <div className="service-section">
             <h2>Sık Sorulan Sorular</h2>
             <div className="faq-section">
               <div className="faq-item">
-                <h3>Proje Sihirbazı nedir?</h3>
-                <p>Proje Sihirbazı, sektörünüz için en uygun ihale ve hibe çağrılarını takip eden gelişmiş bir platformdur.</p>
+                <h3>Proje Sihirbazı tam olarak nedir ve nasıl çalışır?</h3>
+                <p>Proje Sihirbazı, işletmenizin sektörüne özel ihale, hibe ve destek çağrılarını yapay zeka algoritmalarıyla tarayan, analiz eden ve size sunan kapsamlı bir platformdur. Amacımız, iş fırsatlarını en verimli şekilde değerlendirmenizi sağlamaktır.</p>
               </div>
               <div className="faq-item">
-                <h3>Hangi sektörler için uygundur?</h3>
-                <p>Tüm sektörler için uygundur. Sektör bazlı veya tüm sektörler paketlerinden size uygun olanı seçebilirsiniz.</p>
+                <h3>Proje Sihirbazı hangi sektörler ve işletme büyüklükleri için uygundur?</h3>
+                <p>Platformumuz, KOBİ'lerden büyük ölçekli firmalara kadar geniş bir yelpazedeki işletmeler için tasarlanmıştır. Sanayi, teknoloji, tarım, enerji ve daha birçok farklı sektördeki işletmelere özel çözümler sunmaktayız.</p>
               </div>
               <div className="faq-item">
-                <h3>Yapay zeka asistanı nasıl çalışır?</h3>
-                <p>Yapay zeka asistanı, başvuru koşullarını analiz eder ve size özel rehberlik sağlar.</p>
+                <h3>Yapay zeka asistanı, başvuru süreçlerimde bana nasıl destek olur?</h3>
+                <p>Yapay zeka asistanımız, karmaşık başvuru koşullarını analiz eder, gerekli belgeler hakkında rehberlik eder ve başvuru formlarını doldururken size adım adım yol gösterir. Böylece başvuru süreçlerinizi daha hızlı ve hatasız tamamlarsınız.</p>
               </div>
               <div className="faq-item">
-                <h3>Proje Sihirbazı ile nasıl bildirim alırım?</h3>
-                <p>Anlık bildirimler ile yeni fırsatlar hakkında anında bilgilendirilirsiniz.</p>
+                <h3>Proje Sihirbazı üzerinden bildirimler nasıl iletilir?</h3>
+                <p>Yeni ihale ve hibe çağrıları, son başvuru tarihleri ve projenizin durumu hakkında e-posta, SMS ve platform içi anlık bildirimler ile düzenli olarak bilgilendirilirsiniz. Böylece hiçbir önemli gelişmeyi kaçırmazsınız.</p>
               </div>
               <div className="faq-item">
-                <h3>Proje Sihirbazı'nın maliyeti nedir?</h3>
-                <p>Sektör bazlı paket 2000$ + KDV/yıllık, tüm sektörler paketi 20000$ + KDV/yıllıktır.</p>
+                <h3>Proje Sihirbazı'nın abonelik modelleri ve maliyetleri nelerdir?</h3>
+                <p>İşletmenizin ihtiyaçlarına göre farklı abonelik paketleri sunmaktayız. Detaylı fiyat bilgileri ve size özel teklifler için lütfen bizimle iletişime geçin veya platformumuzu ziyaret edin.</p>
               </div>
             </div>
           </div>
+          
+          <div className="contact-section">
+            <h2>Proje Takip Sistemi İçin Destek Alın</h2>
+            <p>
+              Uzman ekibimizle proje ve hibe fırsatlarını en iyi şekilde değerlendirin. 
+              Size özel danışmanlık hizmetimizden yararlanmak için bizimle iletişime geçin.
+            </p>
+            <a href="/iletisim" className="contact-button">
+              İletişime Geçin
+            </a>
+          </div>
+        </div>
         </div>
       </>
     );

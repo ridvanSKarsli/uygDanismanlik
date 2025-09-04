@@ -15,6 +15,8 @@ import {
   GlobalOutlined
 } from '@ant-design/icons';
 
+import Image from 'next/image';
+
 const KutuphanePage: React.FC = () => {
   return (
     <>
@@ -43,8 +45,17 @@ const KutuphanePage: React.FC = () => {
       `}
       </Script>
       
-      <div className='kutuphane-container'>
-        <h1>Kütüphane</h1>
+      <div className='hakkmizda-banner'>
+        <Image src='/images/image2.webp' alt='Kütüphane' className='image' layout='fill' />
+        <div className='hakkimzda-description'>
+            <h2>Bilgi Kütüphanemiz</h2>
+            <p>Eğitim materyalleri, raporlar, makaleler ve daha fazlası için kaynak merkezi.</p>
+        </div>
+      </div>
+      
+      <div className='kutuphane-page'>
+        <div className="page-container">
+          <h1 className="page-title">Kütüphane</h1>
         
         <div className="kutuphane-grid">
           <div className="kutuphane-card">
@@ -169,269 +180,10 @@ const KutuphanePage: React.FC = () => {
             </div>
           </div>
         </div>
+        </div>
       </div>
 
-      <style jsx>{`
-        .kutuphane-container {
-          padding: 2rem;
-          max-width: 1200px;
-          margin: 0 auto;
-        }
 
-        .kutuphane-container h1 {
-          text-align: center;
-          margin-bottom: 3rem;
-          color: rgb(44, 44, 44);
-          font-size: 2.5rem;
-          font-weight: 700;
-        }
-
-        .kutuphane-grid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: repeat(3, 1fr);
-          gap: 2rem;
-          max-width: 1000px;
-          margin: 0 auto;
-        }
-
-        .kutuphane-card {
-          background: white;
-          border-radius: 15px;
-          overflow: hidden;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          cursor: pointer;
-          height: 300px;
-          display: flex;
-          flex-direction: column;
-          border: 2px solid #f0f0f0;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .kutuphane-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 30px rgba(38, 211, 103, 0.2);
-          border-color: rgb(38, 211, 103);
-        }
-
-        .card-icon {
-          flex: 1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 2rem;
-          background: linear-gradient(135deg, rgb(44, 44, 44), rgb(38, 211, 103));
-          color: white;
-        }
-
-        .card-icon svg {
-          font-size: 4rem;
-          opacity: 0.9;
-        }
-
-        .card-content {
-          padding: 1.5rem;
-          background: white;
-          color: rgb(44, 44, 44);
-          text-align: center;
-        }
-
-        .card-content h3 {
-          margin: 0 0 0.5rem 0;
-          font-size: 1.2rem;
-          font-weight: 600;
-          color: rgb(44, 44, 44);
-        }
-
-        .card-content p {
-          margin: 0;
-          font-size: 0.9rem;
-          opacity: 0.8;
-          line-height: 1.4;
-          color: rgb(44, 44, 44);
-        }
-
-        @media (max-width: 768px) {
-          .kutuphane-grid {
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(6, 1fr);
-            gap: 1.5rem;
-          }
-
-          .kutuphane-card {
-            height: 250px;
-          }
-
-          .kutuphane-container {
-            padding: 1rem;
-          }
-
-          .kutuphane-container h1 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .kutuphane-card {
-            height: 200px;
-          }
-
-          .card-content {
-            padding: 1rem;
-          }
-
-          .card-content h3 {
-            font-size: 1rem;
-          }
-
-          .card-content p {
-            font-size: 0.8rem;
-          }
-        }
-
-        /* Eğitimlerimiz Bölümü Stilleri */
-        .egitimlerimiz-section {
-          margin-top: 4rem;
-          padding: 2rem;
-          background: #f8f9fa;
-          border-radius: 15px;
-        }
-
-        .egitimlerimiz-section h2 {
-          text-align: center;
-          margin-bottom: 3rem;
-          color: rgb(44, 44, 44);
-          font-size: 2.5rem;
-          font-weight: 700;
-          position: relative;
-        }
-
-        .egitimlerimiz-section h2::after {
-          content: '';
-          position: absolute;
-          bottom: -10px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 80px;
-          height: 3px;
-          background: linear-gradient(90deg, rgb(44, 44, 44), rgb(38, 211, 103));
-          border-radius: 2px;
-        }
-
-        .egitimler-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 2rem;
-          margin-top: 2rem;
-        }
-
-        .egitim-card {
-          background: white;
-          border-radius: 15px;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-          transition: all 0.3s ease;
-          overflow: hidden;
-          border: 2px solid transparent;
-        }
-
-        .egitim-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 30px rgba(38, 211, 103, 0.2);
-          border-color: rgb(38, 211, 103);
-        }
-
-        .egitim-icon {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 80px;
-          background: linear-gradient(135deg, rgb(38, 211, 103), rgb(44, 44, 44));
-          color: white;
-        }
-
-        .egitim-icon svg {
-          font-size: 2.5rem;
-          opacity: 0.9;
-        }
-
-        .egitim-content {
-          padding: 1.5rem;
-        }
-
-        .egitim-content h3 {
-          font-size: 1.2rem;
-          font-weight: 600;
-          color: rgb(44, 44, 44);
-          margin-bottom: 0.5rem;
-          line-height: 1.3;
-        }
-
-        .egitim-content p {
-          color: rgb(44, 44, 44);
-          line-height: 1.5;
-          margin-bottom: 1rem;
-          opacity: 0.8;
-          font-size: 0.95rem;
-        }
-
-        .egitim-link {
-          display: inline-block;
-          background: linear-gradient(135deg, rgb(44, 44, 44), rgb(38, 211, 103));
-          color: white;
-          padding: 0.5rem 1rem;
-          border-radius: 25px;
-          text-decoration: none;
-          font-size: 0.9rem;
-          font-weight: 500;
-          transition: all 0.3s ease;
-        }
-
-        .egitim-link:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 4px 15px rgba(38, 211, 103, 0.3);
-          color: white;
-          text-decoration: none;
-        }
-
-        @media (max-width: 768px) {
-          .egitimler-grid {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-          }
-
-          .egitimlerimiz-section {
-            padding: 1.5rem;
-            margin-top: 3rem;
-          }
-
-          .egitimlerimiz-section h2 {
-            font-size: 2rem;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .egitimlerimiz-section {
-            padding: 1rem;
-          }
-
-          .egitimlerimiz-section h2 {
-            font-size: 1.8rem;
-          }
-
-          .egitim-content {
-            padding: 1rem;
-          }
-
-          .egitim-content h3 {
-            font-size: 1.1rem;
-          }
-
-          .egitim-content p {
-            font-size: 0.9rem;
-          }
-        }
-      `}</style>
     </>
   );
 };

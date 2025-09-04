@@ -5,7 +5,7 @@ import "@styles/global.scss";
 import "@styles/header.scss";
 import { Provider } from "react-redux";
 import store from "@redux/store";
-import { Footer, Breadcrumb } from "@components";
+import { Footer, Breadcrumb, ScrollToTop } from "@components";
 import {Header} from '@components';
 import Head from "next/head";
 import Script from 'next/experimental-script'
@@ -53,6 +53,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       <Breadcrumb />
           <Component {...pageProps} />
       <Footer />
+      <ScrollToTop />
     </Provider>
     </>
   );

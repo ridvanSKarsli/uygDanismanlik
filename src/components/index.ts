@@ -17,3 +17,4 @@ export * from "./ThreeBoxes";
 export * from "./AvrupaBirligiProjeleri";
 export * from "./FeatureBox";
 export * from "./Breadcrumb";
+export * from "./ScrollToTop";
