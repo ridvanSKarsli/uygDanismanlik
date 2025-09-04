@@ -60,16 +60,7 @@ const BultenlerPage: React.FC = () => {
             <Activities />
           </div>
           
-          <div className="subscribe-section">
-            <h2>Bülten Aboneliği</h2>
-            <p>
-              Düzenli bültenlerimize abone olarak sektördeki son gelişmeleri kaçırmayın. 
-              Size özel hazırladığımız içeriklerle her zaman güncel kalın.
-            </p>
-            <a href="/iletisim" className="subscribe-button">
-              Bültene Abone Ol
-            </a>
-          </div>
+          
         </div>
       </div>
       </>

@@ -1306,30 +1306,47 @@ body {
   .activities-normal-part {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
+    grid-gap: 25px;
     float: left;
     width: 100%;
     padding: 5px;
+    @media only screen and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
     @media only screen and (max-width: 500px) {
       grid-template-columns: repeat(1, 1fr);
     }
     .ant-card {
       float: left;
       width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      overflow: hidden;
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(38, 211, 103, 0.2);
+        border-color: rgb(38, 211, 103);
+      }
       .ant-card-cover {
         img {
-          border-radius: 10px 10px 0 0;
-          height: 200px;
+          border-radius: 12px 12px 0 0;
+          height: 220px;
+          object-fit: cover;
         }
       }
    
       .ant-card-body {
-        padding: 15px;
+        padding: 18px;
         .ant-card-meta-description {
           text-align: justify;
         }
         .ant-card-meta-title {
           white-space: normal;
+          font-weight: 600;
+          font-size: 1.05rem;
         }
       }
     }
