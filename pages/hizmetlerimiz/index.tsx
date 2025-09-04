@@ -63,7 +63,7 @@ const Hizmetlerimiz = () => {
           </div>
           
           <div className="hizmetler-grid">
-            <div className="hizmet-card">
+            <div className="hizmet-card" id="tubitak-teydeb-destek-programlari">
               <div className="hizmet-header">
                 <h3>TÜBİTAK-TEYDEB Destek Programları</h3>
                 <p>Başvuru ve Yürütme Danışmanlığı</p>
@@ -106,7 +106,7 @@ const Hizmetlerimiz = () => {
               </div>
             </div>
             
-            <div className="hizmet-card">
+            <div className="hizmet-card" id="kosgeb-destek-programlari">
               <div className="hizmet-header">
                 <h3>KOSGEB Destek Programları</h3>
                 <p>Başvuru ve Yürütme Danışmanlığı</p>
@@ -125,7 +125,7 @@ const Hizmetlerimiz = () => {
               </div>
             </div>
             
-            <div className="hizmet-card">
+            <div className="hizmet-card" id="teknoloji-gelistirme-bolgesi">
               <div className="hizmet-header">
                 <h3>Teknoloji Geliştirme Bölgesi</h3>
                 <p>Teknopark/Teknokent Başvuru ve Sürdürülebilirliği</p>
@@ -141,7 +141,7 @@ const Hizmetlerimiz = () => {
               </div>
             </div>
             
-            <div className="hizmet-card">
+            <div className="hizmet-card" id="avrupa-birligi-projeleri">
               <div className="hizmet-header">
                 <h3>Avrupa Birliği Projeleri</h3>
                 <p>AB Programları Başvuru ve Yönetim</p>
@@ -157,7 +157,7 @@ const Hizmetlerimiz = () => {
               </div>
             </div>
             
-            <div className="hizmet-card">
+            <div className="hizmet-card" id="yatirim-tesvik-belgesi">
               <div className="hizmet-header">
                 <h3>Yatırım Teşvik Belgesi</h3>
                 <p>Başvuru ve Sürdürülebilirliği</p>
@@ -176,7 +176,7 @@ const Hizmetlerimiz = () => {
               </div>
             </div>
             
-            <div className="hizmet-card">
+            <div className="hizmet-card" id="ihracat-kalkinma-ajansi-destekleri">
               <div className="hizmet-header">
                 <h3>İhracat & Kalkınma Ajansı Destekleri</h3>
                 <p>Başvuru Hazırlama ve Yönetim</p>

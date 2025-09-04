@@ -59,7 +59,7 @@ const Hizmetler: React.FC = () => {
                   {item.content.length > 160 ? `${item.content.slice(0, 160)}...` : item.content}
                 </p>
                 <div className="card-action">
-                  <Link href="/hizmetlerimiz">
+                  <Link href={`/hizmetlerimiz#${item.slug}`}>
                     <div className="header-style-button">
                       Devamı Oku
                     </div>
