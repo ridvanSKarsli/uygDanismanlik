@@ -1,6 +1,7 @@
-import type React from "react"
+import React, { useEffect, useState } from "react"
 import Link from "next/link"
-import { Card as AntdCard, Menu } from "antd"
+import { Card as AntdCard, Menu, Carousel } from "antd"
+import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
 
 const hizmetler = [
   {
@@ -42,33 +43,79 @@ const hizmetler = [
 ]
 
 const Hizmetler: React.FC = () => {
+  const [windowSize, setWindowSize] = useState(0)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setWindowSize(window.screen.width)
+    }
+  })
+
+  function SamplePrevArrow(props: any) {
+    const { className, style, onClick } = props
+    return (
+      <div
+        className={className}
+        style={{ ...style }}
+        onClick={onClick}
+      ><ArrowLeftOutlined /></div>
+    )
+  }
+
+  function SampleNextArrow(props: any) {
+    const { className, style, onClick } = props
+    return (
+      <div
+        className={className}
+        style={{ ...style }}
+        onClick={onClick}
+      ><ArrowRightOutlined /></div>
+    )
+  }
+
+  const slidesToShow = windowSize < 768 ? 1 : windowSize < 1024 ? 2 : 3
+
   return (
     <div className="hizmetler-section">
       <h3 className="section-title">HİZMETLERİMİZ</h3>
       <div className="hizmetler-grid">
-        {hizmetler.map((item) => (
-          <div key={item.id} className="hizmet-card">
-            <AntdCard 
-              className="hizmet-card-inner"
-              bordered={false}
-              hoverable
-            >
-              <div className="card-content">
-                <h4 className="card-title">{item.title}</h4>
-                <p className="card-description">
-                  {item.content.length > 160 ? `${item.content.slice(0, 160)}...` : item.content}
-                </p>
-                <div className="card-action">
-                  <Link href={`/hizmetlerimiz#${item.slug}`}>
-                    <div className="header-style-button">
-                      Devamı Oku
+        <Carousel
+          dots
+          infinite
+          speed={500}
+          slidesToShow={slidesToShow}
+          arrows
+          nextArrow={<SampleNextArrow />}
+          prevArrow={<SamplePrevArrow />}
+          draggable
+          autoplay
+        >
+          {hizmetler.map((item) => (
+            <div key={item.id}>
+              <div className="hizmet-card">
+                <AntdCard 
+                  className="hizmet-card-inner"
+                  bordered={false}
+                  hoverable
+                >
+                  <div className="card-content">
+                    <h4 className="card-title">{item.title}</h4>
+                    <p className="card-description">
+                      {item.content.length > 160 ? `${item.content.slice(0, 160)}...` : item.content}
+                    </p>
+                    <div className="card-action">
+                      <Link href={`/hizmetlerimiz#${item.slug}`}>
+                        <div className="header-style-button">
+                          Devamı Oku
+                        </div>
+                      </Link>
                     </div>
-                  </Link>
-                </div>
+                  </div>
+                </AntdCard>
               </div>
-            </AntdCard>
-          </div>
-        ))}
+            </div>
+          ))}
+        </Carousel>
       </div>
     </div>
   )

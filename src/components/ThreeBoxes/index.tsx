@@ -30,9 +30,6 @@ const threeBoxesData = [
 const ThreeBoxes: React.FC = () => {
   return (
     <div className="three-boxes-section">
-      <div className="section-title">
-        <h2>Hizmetlerimiz</h2>
-      </div>
       <div className="three-boxes-grid">
         {threeBoxesData.map((item) => (
           <div key={item.id} className="three-box-card">

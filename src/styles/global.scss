@@ -40,14 +40,46 @@ body {
   }
   
   .hizmetler-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
     margin-top: 30px;
-    
-    @media only screen and (max-width: 768px) {
-      grid-template-columns: 1fr;
-      gap: 20px;
+  }
+
+  // Hizmetler carousel okları
+  .hizmetler-grid {
+    position: relative;
+    .slick-arrow  {
+      background: #ffffff !important;
+      border: 1px solid #e5e5e5 !important;
+      width: 36px !important;
+      height: 36px !important;
+      border-radius: 50%;
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 14px rgba(0,0,0,0.14);
+        background: #fafafa !important;
+      }
+      span {
+        display: inline-flex;
+        width: 18px;
+        height: 18px;
+        svg {
+          width: 18px;
+          height: 18px;
+          fill: #1f1f1f;
+        }
+      }
+    }
+    .slick-prev {
+      left: -10px;
+      z-index: 2;
+    }
+    .slick-next {
+      right: -10px;
     }
   }
   
@@ -844,6 +876,35 @@ body {
   .ant-carousel {
     @media only screen and (max-width: 500px) {
      margin-top: 50px;
+    }
+  }
+
+  .references-controls {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 12px;
+
+    .control-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid #d9d9d9;
+      background: #fff;
+      color: #333;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+        background: #fafafa;
+      }
     }
   }
   h3{
@@ -1858,19 +1919,32 @@ body {
   }
   
   .hizmetler-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 25px;
     margin-top: 40px;
-    
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    padding-bottom: 8px;
+
+    // Kart genişlikleri: masaüstünde 3 kart görünür
+    .hizmet-card {
+      flex: 0 0 calc((100% - 50px) / 3);
+      scroll-snap-align: start;
+    }
+
     @media only screen and (max-width: 1024px) {
-      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
+      .hizmet-card {
+        flex: 0 0 calc((100% - 20px) / 2);
+      }
     }
     
     @media only screen and (max-width: 768px) {
-      grid-template-columns: 1fr;
-      gap: 20px;
+      gap: 16px;
+      .hizmet-card {
+        flex: 0 0 85%;
+      }
     }
   }
   
@@ -2347,9 +2421,7 @@ body {
       color: #999;
     }
 
-    .ant-breadcrumb-overlay {
-      // Sadece dropdown menüsü varsa bu stil uygulanır, şu an için gerek yok.
-    }
+    // .ant-breadcrumb-overlay { }
   }
 }
 
