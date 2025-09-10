@@ -1,0 +1,114 @@
+.row-contact {
+    border-bottom: 1px solid gainsboro;
+    align-items: center;
+    .marque {
+        .ant-alert[data-show="true"]{
+            background-color: #ffffff;
+            border: 1px solid #ededed;
+        }
+    }
+}
+.logo-area {
+    cursor: pointer;
+    > div {
+        width: 100%;
+        img {
+            object-fit: contain;
+            @media only screen and (min-width:800px) {
+                height: 100px;
+            }
+        }
+    }
+}
+
+.contact-area{
+    position: fixed;
+    top: 50%;
+    z-index: 9;
+
+}
+.email-contact  {
+    border-radius: 0px 10px 0px 10px;
+
+}
+.email-contact {
+    border-radius: 10px 10px 0px 0px;
+}
+.email-contact , .phone-contact , .whatsapp-contact{
+    display: flex;
+    align-items: center;
+    background: rgb(44, 44, 44);
+    width: 300px;
+    padding: 5px;
+    justify-content: center;
+    height: 50px;
+    transition: all .5s ease 0s;
+    &:hover {
+        border-radius: 0 !important;
+            > div {
+                transform: rotateY(0deg);
+                background: green;
+            }
+    }
+    svg {
+        height: 22px;
+        width: 22px;
+        path {
+            fill: white;
+        }
+        
+    }
+    > div {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        border-radius: 0 10px 10px 0;
+        font-size: 14px;
+        float: left;
+        line-height: 1.2;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        height: 100%;
+        min-height: 40px;
+        white-space: nowrap;
+        -webkit-transform: rotateY(90deg);
+        -moz-transform: rotateY(90deg);
+        transform: rotateY(90deg);
+        transition: all .5s ease 0s;
+        -moz-transition: all .5s ease 0s;
+        padding: 6px;
+        transition: all .5s ease 0s;
+        a {
+            color: white;
+        }
+    }
+}
+
+.phone-contact{
+    background: rgb(38, 211, 103);
+    border-radius: 0px 0px 10px 10px;
+    svg {
+        path {
+            fill: white
+        }
+        
+    }
+}
+.whatsapp-contact{
+    background: #25D366; /* WhatsApp yeşili */
+    border-radius: 0px 0px 10px 10px; /* Diğerleriyle uyumlu köşeler */
+    svg {
+        path {
+            fill: white
+        }
+        
+    }
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.ant-menu[role="menu"]{
+    justify-content: center;
+}
