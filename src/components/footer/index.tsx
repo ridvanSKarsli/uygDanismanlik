@@ -1,5 +1,4 @@
 import React, { CSSProperties } from "react";
-import Image from "next/image";
 import { Space } from "antd";
 import Link from 'next/link';
 import {
@@ -25,12 +24,6 @@ export const Footer: React.FC = () => {
       className='footer'
     >
       <Space direction="vertical" size="large">
-        <Image
-          src="/images/logo3.png"
-          alt="Logo"
-          width="190"
-          height="60"
-        />
         <Space align="center" size="middle">
           <div className="footer-link-part">
 
@@ -45,24 +38,25 @@ export const Footer: React.FC = () => {
                   Hakkımızda
                 </Link>
               </li>
-              <li key="offices:2">
-                <Link href='/ekibimiz'>
-                  Ekibimiz
-                </Link>
-              </li>
             </ul>
             <ul className="fa-ul">
-              <li key="kurumsal:1">
-                <Link href='/kurumsal-yonetim-danismanligi'> Kurumsal Yönetim Danışmanlığı </Link>
+              <li key="hizmet:teydeb">
+                <Link href='/tubitak-teydeb'>TÜBİTAK-TEYDEB</Link>
               </li>
-              <li key="kurumsal:2">
-                <Link href='/kurumsal-proje-danismanligi'>Kurumsal Proje Danışmanlığı </Link>
+              <li key="hizmet:kosgeb">
+                <Link href='/kosgeb-destekleri'>KOSGEB Destekleri</Link>
               </li>
-              <li key="kurumsal:3">
-                <Link href='/tesvikler'>Teşvikler</Link>
+              <li key="hizmet:tgb">
+                <Link href='/teknoloji-gelistirme-bolgesi'>Teknoloji Geliştirme Bölgesi</Link>
               </li>
-              <li key="kurumsal:4">
-                <Link href='/dijital-cozumler'>Dijital Çözümler</Link>
+              <li key="hizmet:ab">
+                <Link href='/avrupa-birligi-projeleri'>Avrupa Birliği Projeleri</Link>
+              </li>
+              <li key="hizmet:ytb">
+                <Link href='/yatirim-tesvik-belgesi'>Yatırım Teşvik Belgesi</Link>
+              </li>
+              <li key="hizmet:ihracat">
+                <Link href='/ihracat-kalkinma-ajansi'>İhracat & Kalkınma Ajansı</Link>
               </li>
             </ul>
             <ul className="fa-ul">
@@ -91,20 +85,21 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li className="address1"><i className="fa fa-map-o" aria-hidden="true"></i>
-                <span>Subaşı Mah. Bahadır Sok. No:27 D: 2 Turgutlu/MANİSA</span></li><li><i className="fa fa-phone"></i><a href="tel:+905528048454">+90 552 804 84 54</a></li><li><i className="fa fa-envelope-o" aria-hidden="true"></i>
+                <span>Muradiye Mahallesi 2 Sokak No:41 Daire : 504 Yunusemre/MANİSA</span></li><li><i className="fa fa-phone"></i><a href="tel:+905528048454">+90 552 804 84 54</a></li><li><i className="fa fa-envelope-o" aria-hidden="true"></i>
                 <a href="mailto:info@uygdanismanlik.com">info@uygdanismanlik.com</a></li><li><i className="fa fa-clock-o"></i>08:30 - 19:00</li>
             </ul>
           </div>
 
         </Space>
         <Space align="center" size="middle">
-          <a
-            href="https://twitter.com/uygdanismanlik"
-            target="_blank"
-            style={iconStyle}
-          >
-            <TwitterOutlined />
-          </a>
+        <a
+          href="https://x.com/uygdanismanlik"
+          target="_blank"
+          style={iconStyle}
+        >
+          <TwitterOutlined />
+        </a>
+
           <a
             href="https://www.instagram.com/uygdanismanlik/"
             target="_blank"
