@@ -10,13 +10,13 @@ import {
 export const Footer: React.FC = () => {
   const iconStyle: CSSProperties = {
     fontSize: 22,
-    color: "#fff",
+    color: "var(--color-bg)",
   };
   return (
     <div
       style={{
-        backgroundColor: "#282c34",
-        color: "#fff",
+        backgroundColor: "var(--color-dark)",
+        color: "var(--color-bg)",
         textAlign: "center",
         paddingTop: 32,
         paddingBottom: 32,

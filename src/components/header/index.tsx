@@ -271,7 +271,7 @@ export const Header: React.FC = ()=> {
                 </div>
             </Col> */}
           </Row>
-          <div style={{ backgroundColor: "#20232a", textAlign: "center" }}>
+          <div style={{ backgroundColor: "var(--color-dark)", textAlign: "center" }}>
     
             <Menu  onClick={handleClick} selectedKeys={[current]} mode="horizontal">
               <Menu.Item key="mail" icon={<MailOutlined />}>

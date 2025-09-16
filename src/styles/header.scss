@@ -3,7 +3,7 @@
     align-items: center;
     .marque {
         .ant-alert[data-show="true"]{
-            background-color: #ffffff;
+            background-color: var(--color-bg);
             border: 1px solid #ededed;
         }
     }
@@ -37,7 +37,7 @@
 .email-contact , .phone-contact , .whatsapp-contact{
     display: flex;
     align-items: center;
-    background: rgb(44, 44, 44);
+    background: var(--color-text);
     width: 300px;
     padding: 5px;
     justify-content: center;
@@ -54,16 +54,16 @@
         height: 22px;
         width: 22px;
         path {
-            fill: white;
+            fill: var(--color-bg);
         }
         
     }
     > div {
         display: flex;
         flex-direction: column;
-        color: #fff;
+        color: var(--color-bg);
         border-radius: 0 10px 10px 0;
-        font-size: 14px;
+        font-size: var(--font-size-sm);
         float: left;
         line-height: 1.2;
         position: absolute;
@@ -80,13 +80,13 @@
         padding: 6px;
         transition: all .5s ease 0s;
         a {
-            color: white;
+            color: var(--color-bg);
         }
     }
 }
 
 .phone-contact{
-    background: rgb(38, 211, 103);
+    background: var(--color-primary);
     border-radius: 0px 0px 10px 10px;
     svg {
         path {
@@ -107,7 +107,7 @@
 }
 a {
     text-decoration: none;
-    color: black;
+    color: var(--color-text);
 }
 .ant-menu[role="menu"]{
     justify-content: center;

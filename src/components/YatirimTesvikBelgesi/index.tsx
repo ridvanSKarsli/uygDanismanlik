@@ -12,7 +12,7 @@ import {
   BuildOutlined,
 } from "@ant-design/icons";
 
-const ICON_STYLE = { fontSize: 40, color: "#1b9ce3" };
+const ICON_STYLE = { fontSize: 40, color: "var(--color-accent)" };
 
 const BOLGESEL = [
   { title: "KDV İstisnası", icon: <PercentageOutlined style={ICON_STYLE} /> },

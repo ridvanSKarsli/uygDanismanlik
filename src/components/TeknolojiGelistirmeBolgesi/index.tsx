@@ -3,7 +3,7 @@ import { Row, Col } from "antd";
 import { FeatureBox } from "@components";
 import { SearchOutlined, FileTextOutlined, ToolOutlined } from "@ant-design/icons";
 
-const ICON_STYLE = { fontSize: 40, color: "#1b9ce3" };
+const ICON_STYLE = { fontSize: 40, color: "var(--color-accent)" };
 
 const ITEMS = [
   {

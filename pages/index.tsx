@@ -1,5 +1,7 @@
 import React from "react";
 import {  Main, OurReferences, Basarilarimiz, Hizmetler, SloganArea, ThreeBoxes} from "@components";
+import { Button } from 'antd';
+import { FilePptOutlined } from '@ant-design/icons';
 import Head from 'next/head'
 
 const Home: React.FC = () => {
@@ -21,6 +23,26 @@ const Home: React.FC = () => {
       style={{ display: "flex",overflow:'hidden', flexDirection: "column", minHeight: "100vh" }}
     >
       <Main />
+      <div style={{ display:'flex', justifyContent:'center', margin:'24px 0', width:'90%', maxWidth: '800px', alignSelf:'center' }}>
+        <a href="/UYG.pdf" target="_blank" rel="noopener noreferrer" style={{ width: '100%' }}>
+          <Button
+            block
+            size="large"
+            icon={<FilePptOutlined />}
+            style={{
+              backgroundColor: 'var(--color-primary)',
+              borderColor: 'var(--color-primary)',
+              color: 'white',
+              borderRadius: 'var(--radius-lg)',
+              padding: '12px 24px',
+              height: 56,
+              boxShadow: 'var(--shadow-primary)'
+            }}
+          >
+            Tanıtım Sunumu
+          </Button>
+        </a>
+      </div>
       <ThreeBoxes />
       <Hizmetler />
       <Basarilarimiz />
